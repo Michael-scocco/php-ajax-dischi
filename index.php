@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,82 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<?php
-$db =
-        [
-            [
-                "poster" => "",
-                "title" => "New Jersey",
-                "author" => "Bon Jovi",
-                "genre" => "Rock",
-                "year" => "1988"
-            ],
-            [
-                "poster" => "",
-                "title" => "Live at Wembley 86",
-                "author" => "Queen",
-                "genre" => "Pop",
-                "year" => "1992"
-            ],
-            [
-                "poster" => "",
-                "title" => "Ten's Summoner's Tales",
-                "author" => "Sting",
-                "genre" => "Pop",
-                "year" => "1993"
-            ],
-            [
-                "poster" => "",
-                "title" => "Steve Gadd Band",
-                "author" => "Steve Gadd Band",
-                "genre" => "Jazz",
-                "year" => "2018"
-            ],
-            [
-                "poster" => "",
-                "title" => "Brave new World",
-                "author" => "Iron Maiden",
-                "genre" => "Metal",
-                "year" => "2000"
-            ],
-            [
-                "poster" => "",
-                "title" => "One more car, one more raider",
-                "author" => "Eric Clapton",
-                "genre" => "Rock",
-                "year" => "2002"
-            ],
-            [
-                "poster" => "",
-                "title" => "Made in Japan",
-                "author" => "Deep Purple",
-                "genre" => "Rock",
-                "year" => "1972"
-            ],
-            [
-                "poster" => "",
-                "title" => "And Justice for All",
-                "author" => "Metallica",
-                "genre" => "Metal",
-                "year" => "1988"
-            ],
-            [
-                "poster" => "",
-                "title" => "Hard Wired",
-                "author" => "Dave Weckl",
-                "genre" => "Jazz",
-                "year" => "1994"
-            ],
-            [
-                "poster" => "",
-                "title" => "Bad",
-                "author" => "Michael Jacjson",
-                "genre" => "Pop",
-                "year" => "1987"
-            ]
-        ];
-?>
+
+    <div id="app"> 
+        <header>
+            <img src="" alt="logo spotify" width="100" height="100">
+
+            <label for="Albums">Scegli un genere:</label>
+
+            <select name="albums" id="albums">
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
+            </select>
+        </header>
+        <main>
+            <ul class="lista-album">
+                <li class="contenitore-singolo-album" v-for="singoloAlbum in listaAlbum">
+                    <img :src="singoloAlbum.poster" alt="">
+                    <h1>{{singoloAlbum.title}}</h1>
+                    <h3>{{singoloAlbum.author}}</h3>
+                    <p>{{singoloAlbum.year}}</p>
+                </li>
+            </ul>
+        </main>
+        
+    
+    </div>
+ 
+    
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+     <!-- LIBRERIA AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
