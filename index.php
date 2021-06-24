@@ -16,7 +16,7 @@
 
             <label for="Albums">Scegli un genere:</label>
 
-            <select name="albums" id="albums">
+            <select v-for="genere in generi" name="albums" id="albums">
                 <option value="Pop">Pop</option>
                 <option value="Rock">Rock</option>
                 <option value="Jazz">Jazz</option>

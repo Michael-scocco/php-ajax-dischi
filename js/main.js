@@ -2,6 +2,12 @@ const app = new Vue({
     el: '#app',
     data:{
         listaAlbum:[],
+        generi:[
+            'Pop',
+            'Rock',
+            'Jazz',
+            'Metal'
+        ],
     },
     methods:{
 
@@ -9,7 +15,7 @@ const app = new Vue({
     mounted(){
        
             axios
-            .get("data.php")
+            .get("./database/data.php")
             .then(resp => {
                 // console.log(resp.data.response);
                 const data = resp.data;
