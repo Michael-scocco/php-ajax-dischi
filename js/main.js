@@ -2,12 +2,7 @@ const app = new Vue({
     el: '#app',
     data:{
         listaAlbum:[],
-        generi:[
-            'Pop',
-            'Rock',
-            'Jazz',
-            'Metal'
-        ],
+        generi: ['Rock', 'Pop', 'Metal', 'all'],
     },
     methods:{
 

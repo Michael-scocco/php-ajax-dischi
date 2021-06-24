@@ -12,16 +12,19 @@
 
     <div id="app"> 
         <header>
-            <img src="" alt="logo spotify" width="100" height="100">
+            <div class="immagine">
+                <img src="./img/logo.png" alt="logo spotify" width="100" height="100">  
+            </div>
+            
 
-            <label for="Albums">Scegli un genere:</label>
+            <div class="selezione">
+                <label for="generi">Scegli un genere:</label>
+                <select name="generi" id="generi">
+                    <option valore disabilitato="">Seleziona un genere</option>
+                    <option v-for="genere in generi" :value="genere">{{genere}}</option>
+                </select>
+            </div>
 
-            <select v-for="genere in generi" name="albums" id="albums">
-                <option value="Pop">Pop</option>
-                <option value="Rock">Rock</option>
-                <option value="Jazz">Jazz</option>
-                <option value="Metal">Metal</option>
-            </select>
         </header>
         <main>
             <ul class="lista-album">

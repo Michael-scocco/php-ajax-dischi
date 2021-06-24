@@ -10,6 +10,12 @@ header{
     height: 150px;
 }
 
+.immagine{
+    width: 45%;
+}
+label{
+    color: white;
+}
 main{
     background-color: #1e2d3b;
 }
