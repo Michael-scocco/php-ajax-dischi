@@ -1,11 +1,15 @@
 {
-  "name": "Dischi",
+  "name": "dischi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

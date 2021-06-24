@@ -7,7 +7,26 @@
   \********************/
 /***/ (() => {
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    listaAlbum: [],
+    generi: ['Rock', 'Pop', 'Metal', 'all']
+  },
+  methods: {},
+  mounted: function mounted() {
+    var _this = this;
 
+    axios.get("./database/data.php").then(function (resp) {
+      // console.log(resp.data.response);
+      var data = resp.data; // console.log(data);
+
+      _this.listaAlbum = data;
+    })["catch"](function (e) {
+      console.error(e);
+    });
+  }
+});
 
 /***/ }),
 
