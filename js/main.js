@@ -12,7 +12,7 @@ const app = new Vue({
             .get("data.php")
             .then(resp => {
                 // console.log(resp.data.response);
-                const data = r.data;
+                const data = resp.data;
                 // console.log(data);
                 this.listaAlbum = data;
             })
