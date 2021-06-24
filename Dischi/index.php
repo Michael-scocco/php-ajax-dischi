@@ -16,7 +16,6 @@
                 <img src="./img/logo.png" alt="logo spotify" width="100" height="100">  
             </div>
             
-
             <div class="selezione">
                 <label for="generi">Scegli un genere:</label>
                 <select name="generi" id="generi">
@@ -37,7 +36,6 @@
             </ul>
         </main>
         
-    
     </div>
  
     
